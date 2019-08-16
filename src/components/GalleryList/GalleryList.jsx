@@ -13,9 +13,7 @@ class GalleryList extends Component {
 
                 <GalleryItem image={image} />
 
-                // <div className="imageDivs">
-                //     <img src={image.path} alt={image.description} key={image.id} className ="image"/>
-                // </div>
+    
             )
         })
 

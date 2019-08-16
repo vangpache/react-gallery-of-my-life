@@ -5,12 +5,19 @@ class GalleryItem extends Component {
 
     //CONDITIONAL RENDERING ON CLICK BUTTON TO SHOW PHOTO DESCRIPTION
 
+    state = {
+        showDescription: false
+    }
+
     handleDescription = () => {
         console.log('photo was clicked for description');
-        
+        this.setState({
+            showDescription: !this.state.showDescription
+        })  
     }
 
     render() {
+
 
 
         return (
@@ -20,7 +27,15 @@ class GalleryItem extends Component {
                         alt={this.props.image.description} 
                         key={this.props.image.id} 
                         className ="image"
-                        onClick={this.handleDescription}/><br/>
+                        onClick={this.handleDescription}/>
+
+
+                        {/* conditional truth/falsie for image description use */}
+                        {this.state.showDescription &&
+                        <div className="imageDivs">
+                            <p>{this.props.image.description}</p>
+                        </div>}
+                        <br/>
                 <button>like this photo</button>
             </div>
         )
