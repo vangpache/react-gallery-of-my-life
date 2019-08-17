@@ -30,7 +30,7 @@ class GalleryItem extends Component {
         } else {
             imageToRender = <div className="imageDivs"
                 onClick={this.handleDescription}>
-                <p className="textRendering">{this.props.image.description}</p>
+                <p className="textRendering"><br /><br /><br />{this.props.image.description}<br /><br /><br /></p>
             </div>
         }
 
