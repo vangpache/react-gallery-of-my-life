@@ -6,7 +6,7 @@ class GalleryItem extends Component {
     //CONDITIONAL RENDERING ON CLICK BUTTON TO SHOW PHOTO DESCRIPTION
 
     state = {
-        showDescription: false
+        showDescription: true
     }
 
     handleDescription = () => {
@@ -16,28 +16,35 @@ class GalleryItem extends Component {
         })  
     }
 
-    render() {
 
+    render() {
+        let imageToRender;
+        if (this.state.showDescription) {
+            imageToRender = <div className="imageDivs">
+                <img src={this.props.image.path}
+                    alt={this.props.image.description}
+                    key={this.props.image.id}
+                    className="image"
+                    onClick={this.handleDescription} />
+
+                <br />
+                <button>like this photo</button>
+            </div>
+        } else {
+            imageToRender = <div className="imageDivs"
+                onClick={this.handleDescription}>
+                <p>{this.props.image.description}</p>
+                <br />
+                <button>like this photo</button>
+            </div>
+        }
 
 
         return (
-
             <div className="imageDivs">
-                <img    src={this.props.image.path} 
-                        alt={this.props.image.description} 
-                        key={this.props.image.id} 
-                        className ="image"
-                        onClick={this.handleDescription}/>
-
-
-                        {/* conditional truth/falsie for image description use */}
-                        {this.state.showDescription &&
-                        <div className="imageDivs">
-                            <p>{this.props.image.description}</p>
-                        </div>}
-                        <br/>
-                <button>like this photo</button>
+                {imageToRender}
             </div>
+            
         )
     }
 }
@@ -45,6 +52,29 @@ class GalleryItem extends Component {
 
 
 
+// {
+//     this.state.showDescription &&
+//         <div>
+//             <p>{this.props.image.description}</p>
+//         </div>
+// } 
+
+
+
+// if(this.state.showDescription) {
+//                     <div className="imageDivs">
+//                         <img src={this.props.image.path}
+//                             alt={this.props.image.description}
+//                             key={this.props.image.id}
+//                             className="image"
+//                             onClick={this.handleDescription} />
+
+//                         <br />
+//                         <button>like this photo</button>
+//                     </div>
+//                 } else {
+//                     <h1>HEEYYY!!!</h1>
+//                 }
 
 
 

@@ -13,21 +13,15 @@ class GalleryList extends Component {
 
                 <GalleryItem image={image} />
 
-    
             )
         })
 
 
         return (
-
-
             
             <div>
                 {displayImages}
-                
             </div>
-
-
 
         )
     }

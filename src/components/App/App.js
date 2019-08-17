@@ -29,6 +29,17 @@ class App extends Component {
     })
   }
 
+  updateLikes = () => {
+    console.log('in UpdateLikes');
+    axios
+    .put('/gallery')
+    .then((result) => {
+      console.log('updated result:', result);
+    }).catch ((error) => {
+      console.log('updateLikes error:', error);
+    })
+  }
+
 
   render() {
     return (
