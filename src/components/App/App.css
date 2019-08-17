@@ -30,4 +30,9 @@
 .imageDivs {
   display: inline-block;
   margin: 10px;
+  vertical-align: middle;
+}
+
+.textRendering {
+  width: 300px;
 }

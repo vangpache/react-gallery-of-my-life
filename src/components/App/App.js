@@ -29,12 +29,13 @@ class App extends Component {
     })
   }
 
-  updateLikes = () => {
+  updateLikes = (id) => {
     console.log('in UpdateLikes');
     axios
-    .put('/gallery')
+      .put(`/gallery/like/${id}`, )
     .then((result) => {
       console.log('updated result:', result);
+      this.getImages();
     }).catch ((error) => {
       console.log('updateLikes error:', error);
     })
@@ -49,7 +50,7 @@ class App extends Component {
         </header>
         <br/>
         <p>Gallery goes here</p>
-        <GalleryList images={this.state.images}/>
+        <GalleryList images={this.state.images} updateLikes={this.updateLikes}/>
       </div>
     );
   }

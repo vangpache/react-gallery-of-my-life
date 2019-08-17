@@ -11,7 +11,7 @@ class GalleryList extends Component {
         let displayImages = this.props.images.map(image => {
             return (
 
-                <GalleryItem image={image} />
+                <GalleryItem image={image} updateLikes={this.props.updateLikes}/>
 
             )
         })

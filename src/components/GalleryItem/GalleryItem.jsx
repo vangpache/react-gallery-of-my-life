@@ -26,16 +26,11 @@ class GalleryItem extends Component {
                     key={this.props.image.id}
                     className="image"
                     onClick={this.handleDescription} />
-
-                <br />
-                <button>like this photo</button>
             </div>
         } else {
             imageToRender = <div className="imageDivs"
                 onClick={this.handleDescription}>
-                <p>{this.props.image.description}</p>
-                <br />
-                <button>like this photo</button>
+                <p className="textRendering">{this.props.image.description}</p>
             </div>
         }
 
@@ -43,40 +38,14 @@ class GalleryItem extends Component {
         return (
             <div className="imageDivs">
                 {imageToRender}
+                <br/>
+                <button onClick={() => this.props.updateLikes(this.props.image.id)}>like this photo</button>
+                <h6><span>{this.props.image.likes}</span> likes</h6>
             </div>
             
         )
     }
 }
-
-
-
-
-// {
-//     this.state.showDescription &&
-//         <div>
-//             <p>{this.props.image.description}</p>
-//         </div>
-// } 
-
-
-
-// if(this.state.showDescription) {
-//                     <div className="imageDivs">
-//                         <img src={this.props.image.path}
-//                             alt={this.props.image.description}
-//                             key={this.props.image.id}
-//                             className="image"
-//                             onClick={this.handleDescription} />
-
-//                         <br />
-//                         <button>like this photo</button>
-//                     </div>
-//                 } else {
-//                     <h1>HEEYYY!!!</h1>
-//                 }
-
-
 
 
 export default GalleryItem;
