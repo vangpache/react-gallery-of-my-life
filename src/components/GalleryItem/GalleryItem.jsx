@@ -39,7 +39,8 @@ class GalleryItem extends Component {
             <div className="imageDivs">
                 {imageToRender}
                 <br/>
-                <button onClick={() => this.props.updateLikes(this.props.image.id)}>like this photo</button>
+                <button onClick={() => this.props.updateLikes(this.props.image.id)} 
+                        className="btn btn-warning"><img src="images/thumbs-up.png" alt="thumbs up" className="thumbsup"/></button>
                 <h6><span>{this.props.image.likes}</span> likes</h6>
             </div>
             

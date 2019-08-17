@@ -2,11 +2,11 @@
   text-align: center;
 }
 
-.App-header {
-  background-color: #222;
-  height: 70px;
-  padding: 20px;
-  color: white;
+.jumbotron {
+  color: #eb7070;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 22px;
+
 }
 
 .App-title {
@@ -35,4 +35,17 @@
 
 .textRendering {
   width: 300px;
+}
+
+p {
+  background-color: #ffffc5
+}
+
+.thumbsup {
+  width: 30px;
+  height: 25px;
+}
+
+.btn {
+  margin: 5px;
 }

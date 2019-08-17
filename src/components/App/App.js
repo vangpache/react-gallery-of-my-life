@@ -45,11 +45,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <header className="jumbotron">
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br/>
-        <p>Gallery goes here</p>
+       
         <GalleryList images={this.state.images} updateLikes={this.updateLikes}/>
       </div>
     );
