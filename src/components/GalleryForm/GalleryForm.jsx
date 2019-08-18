@@ -20,13 +20,13 @@ class GalleryForm extends Component {
                             placeholder="Description of Photo" 
                             className="inputs" 
                             value={this.props.newPost.description}
-                            datatype={this.props.newPost.id = this.props.images.length}
-                            onChange={this.props.handleChangeInputs('description', 'id')} /><br />
+                            // datatype={this.props.newPost.id = this.props.images.length}
+                            onChange={this.props.handleChangeInputs('description')} /><br />
                     <input  type="url" 
                             placeholder="URL of image here" 
                             className="inputs" 
-                            value={this.props.newPost.url}
-                            onChange={this.props.handleChangeInputs('url')} 
+                            value={this.props.newPost.path}
+                            onChange={this.props.handleChangeInputs('path')} 
                             />
 
                     <button onClick={this.props.handleSubmitNew}>Submit New Event</button>

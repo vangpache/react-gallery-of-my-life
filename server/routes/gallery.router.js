@@ -38,6 +38,19 @@ router.get('/', (req, res) => {
 //POST Route
 router.post('/', (req, res) => {
     console.log('POST data:', req.body);
+    let newImage = req.body;
+    console.log(newImage.description);
+    
+    let queryText = `INSERT INTO images ("path", "description", "likes")
+                    VALUES ($1, $2, 0);`;
+    pool.query(queryText, [newImage.path, newImage.description])
+        .then((result) => {
+            console.log('in POST:', result);
+            res.sendStatus(201);
+}).catch((error) => {
+    console.log('error in POST:', error);
+    res.sendStatus(500)  
+})
 })
 
 module.exports = router;

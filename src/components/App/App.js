@@ -69,12 +69,12 @@ class App extends Component {
   addNewImage = () => {
     console.log('in ADDnewImage', this.state.images);
     axios
-    .post('/gallery', this.state.images)
+    .post('/gallery', this.state.newPost)
     .then((result) => {
       console.log('POST created:', result);
       this.getImages();
     }).catch ((error) => {
-      console.log('POS not created, error:', error);
+      console.log('POST not created, error:', error);
     })
   }
 
