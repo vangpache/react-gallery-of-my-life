@@ -42,8 +42,8 @@ class GalleryItem extends Component {
                 <h6><span>{this.props.image.likes}</span> likes</h6>
                 <button onClick={() => this.props.updateLikes(this.props.image.id)}
                     className="btn btn-warning"><img src="images/thumbs-up.png" alt="thumbs up" className="thumbsup" /></button>
+                <button onClick={() => this.props.delete(this.props.image.id)} className="btn btn-dark">Delete</button>
             </div>
-            
         )
     }
 }

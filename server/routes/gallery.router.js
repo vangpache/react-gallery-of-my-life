@@ -20,7 +20,6 @@ router.put('/like/:id', (req, res) => {
 }); // END PUT Route
 
 
-
 // GET Route
 router.get('/', (req, res) => {
     let queryText = `SELECT * FROM  images ORDER BY id DESC;`;
@@ -53,4 +52,20 @@ router.post('/', (req, res) => {
 })
 })
 
+
+//DELETE Route
+router.delete ('/:id', (req, res) => {
+    let idToDelete = req.params.id
+    console.log('deleting this id:', idToDelete);
+    
+    let queryText = `DELETE FROM images WHERE id = $1`
+    pool.query(queryText, [idToDelete])
+    .then((result) => {
+        console.log('image deleted:', result);
+        res.sendStatus(200);  
+    }).catch((error) => {
+        console.log('image not deleted:', error);
+        res.sendStatus(500)
+    })
+})
 module.exports = router;

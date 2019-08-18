@@ -79,6 +79,18 @@ class App extends Component {
     })
   }
 
+  delete = (id) => {
+    console.log('delete button was clicked');
+    axios
+    .delete(`/gallery/${id}`)
+    .then((result) => {
+      console.log('Deleted result:', result);
+      this.getImages();
+    }).catch((error) => {
+      console.log('delete error:', error);
+    })
+  }
+
 
   render() {
     return (
@@ -95,7 +107,9 @@ class App extends Component {
         <div className="row no-gutters">
           <div className="col-9 no-gutters">
             <div className="leftside">
-              <GalleryList images={this.state.images} updateLikes={this.updateLikes} />
+              <GalleryList  images={this.state.images} 
+                            updateLikes={this.updateLikes} 
+                            delete={this.delete}/>
             </div>
           </div>
 
