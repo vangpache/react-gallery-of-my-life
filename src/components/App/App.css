@@ -9,19 +9,6 @@
 
 }
 
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 .image {
   width: 300px;
   height: 300px;
@@ -36,10 +23,9 @@
 
 .textRendering {
   width: 300px;
-}
-
-p {
+  height: 285px;
   background-color: #ffffc5
+  
 }
 
 .thumbsup {
@@ -48,5 +34,28 @@ p {
 }
 
 .btn {
+  margin: 5px;
+}
+
+h6 {
+  display: inline-block;
+}
+
+.leftside, .rightside {
+  height: 100%;
+  /* width: 100% */
+}
+
+.leftside {
+  background-color: #eb7070;
+}
+
+.rightside {
+  background-color: aqua;
+  text-align: left;
+  /* width: 20%; */
+}
+
+.inputs {
   margin: 5px;
 }
