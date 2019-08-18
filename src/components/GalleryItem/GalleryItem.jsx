@@ -30,7 +30,7 @@ class GalleryItem extends Component {
         } else {
             imageToRender = <div className="imageDivs"
                 onClick={this.handleDescription}>
-                <p className="textRendering"><br /><br /><br />{this.props.image.description}<br /><br /><br /></p>
+                <p className="textRendering"><br /><br /><br /><br />{this.props.image.description}<br /><br /><br /><br /></p>
             </div>
         }
 
@@ -39,9 +39,9 @@ class GalleryItem extends Component {
             <div className="imageDivs">
                 {imageToRender}
                 <br/>
-                <button onClick={() => this.props.updateLikes(this.props.image.id)} 
-                        className="btn btn-warning"><img src="images/thumbs-up.png" alt="thumbs up" className="thumbsup"/></button>
                 <h6><span>{this.props.image.likes}</span> likes</h6>
+                <button onClick={() => this.props.updateLikes(this.props.image.id)}
+                    className="btn btn-warning"><img src="images/thumbs-up.png" alt="thumbs up" className="thumbsup" /></button>
             </div>
             
         )
