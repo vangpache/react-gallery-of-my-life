@@ -10,7 +10,6 @@ class App extends Component {
     this.getImages();
   }
 
-
   state = {
     images: [],
     newPost: {
@@ -20,7 +19,6 @@ class App extends Component {
       likes: 0
     },
   }
-
 
   getImages = () => {
     console.log('in GET IMAGES');
@@ -47,7 +45,6 @@ class App extends Component {
         console.log('updateLikes error:', error);
       })
   }
-
 
   handleChangeInputs = (propertyValue) => (event) => {
     this.setState({
@@ -90,7 +87,6 @@ class App extends Component {
       console.log('delete error:', error);
     })
   }
-
 
   render() {
     return (

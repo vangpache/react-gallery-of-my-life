@@ -10,8 +10,6 @@ class GalleryForm extends Component {
     render () {
 
 
-
-
         return (
             <div className="col no-gutters">
                 <div className="rightside">
