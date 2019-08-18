@@ -27,7 +27,8 @@ class GalleryForm extends Component {
                             onChange={this.props.handleChangeInputs('path')} 
                             />
 
-                    <button onClick={this.props.handleSubmitNew}>Submit New Event</button>
+                    <button onClick={this.props.handleSubmitNew}
+                            className="btn btn-danger">Submit New Event</button>
                 </div>
             </div>
         )
