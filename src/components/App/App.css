@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin: 0 100px 0 100px;
 }
 
 .jumbotron {
@@ -43,7 +44,7 @@ h6 {
 
 .leftside, .rightside {
   height: 100%;
-  /* width: 100% */
+  padding-top: 100px;;
 }
 
 .leftside {
@@ -53,9 +54,14 @@ h6 {
 .rightside {
   background-color: aqua;
   text-align: left;
-  /* width: 20%; */
 }
 
 .inputs {
   margin: 5px;
+  margin-left: 50px;
+}
+
+h4 {
+  text-align: center;
+  padding: 10px;
 }

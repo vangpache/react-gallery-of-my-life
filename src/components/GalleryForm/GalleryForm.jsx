@@ -7,7 +7,6 @@ class GalleryForm extends Component {
 
 
 
-
     render () {
 
 
@@ -16,6 +15,7 @@ class GalleryForm extends Component {
         return (
             <div className="col no-gutters">
                 <div className="rightside">
+                    <h4>Add a New Post:</h4>
                     <input  type="text" 
                             placeholder="Description of Photo" 
                             className="inputs" 
@@ -35,10 +35,6 @@ class GalleryForm extends Component {
         )
     }
 }
-
-
-
-
 
 
 

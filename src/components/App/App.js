@@ -58,6 +58,7 @@ class App extends Component {
     });
   }
 
+
   handleSubmitNew = (event) => {
         console.log('submit button was clicked');
         this.setState({
@@ -88,7 +89,7 @@ class App extends Component {
           <header className="jumbotron">
             <h1 className="App-title">Gallery of My Life</h1>
           </header>
-          {JSON.stringify(this.state)}
+          {/* {JSON.stringify(this.state)} */}
         </div>
 
         <div className="row no-gutters">
