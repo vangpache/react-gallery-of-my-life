@@ -62,6 +62,15 @@ class App extends Component {
           images: [...this.state.images, this.state.newPost]
         })
         this.addNewImage();
+        //clear fields
+        this.setState ({
+          newPost: {
+            id: '',
+            path: '',
+            description: '',
+            likes: 0
+          }
+        })
     }
 
   addNewImage = () => {
